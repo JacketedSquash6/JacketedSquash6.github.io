@@ -1,0 +1,77 @@
+body {
+    background-color: grey;
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    background: lightsalmon;
+    margin: 200px auto;
+
+    animation-name: square-to-circle;
+    animation-duration: 2s;
+    animation-delay: .5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+}
+
+@keyframes square-to-circle {
+    0% {
+        border-radius: 0px;
+        background-color: lightsalmon;
+        transform: rotate(0deg);
+    }
+    25% {
+        border-radius: 50% 0 0 0;
+        background-color: darksalmon;
+        transform: rotate(45deg);
+    }
+    50% {
+        border-radius: 50% 50% 0 0;
+        background-color: salmon;
+        transform: rotate(90deg);
+    }
+    75% {
+        border-radius: 50% 50% 50% 0;
+        background-color: darksalmon;
+        transform: rotate(135deg);
+    }
+    100% {
+        border-radius: 50%;
+        background-color: lightsalmon;
+        transform: rotate(180deg);
+    }
+}
+
+.box2 {
+    width: 250px;
+    height: 250px;
+    background: red;
+    margin: 200 auto;
+
+    animation-name: animation2;
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: normal;
+}
+
+@keyframes animation2 {
+    0% {
+        border-radius: 50% 0 50% 0;
+        background-color: red;
+        transform: rotate(0deg);
+    }
+    50% {
+        border-radius: 50% 0 50% 0;
+        background-color: crimson;
+        transform: rotate(90deg);
+    }
+    100% {
+        border-radius: 0 50% 0 50%;
+        background-color: red;
+        transform: rotate(90deg);
+    }
+}
