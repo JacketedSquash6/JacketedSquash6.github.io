@@ -9,38 +9,43 @@ body {
     margin: 200px auto;
 
     animation-name: square-to-circle;
-    animation-duration: 2s;
-    animation-delay: .5s;
+    animation-duration: 5s;
+    animation-delay: 0s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
-    animation-direction: alternate;
+    animation-direction: normal;
 }
 
 @keyframes square-to-circle {
     0% {
         border-radius: 0px;
-        background-color: lightsalmon;
+        background-color: #f00;
         transform: rotate(0deg);
     }
-    25% {
+    20% {
         border-radius: 50% 0 0 0;
-        background-color: darksalmon;
-        transform: rotate(45deg);
-    }
-    50% {
-        border-radius: 50% 50% 0 0;
-        background-color: salmon;
+        background-color: #b00;
         transform: rotate(90deg);
     }
-    75% {
-        border-radius: 50% 50% 50% 0;
-        background-color: darksalmon;
-        transform: rotate(135deg);
+    40% {
+        border-radius: 50% 0 0 50%;
+        background-color: #700;
+        transform: rotate(180deg);
+    }
+    60% {
+        border-radius: 50% 0 50% 50% ;
+        background-color: #300;
+        transform: rotate(270deg);
+    }
+    80% {
+        border-radius: 50%;
+        background-color: #000;
+        transform: rotate(360deg);
     }
     100% {
-        border-radius: 50%;
-        background-color: lightsalmon;
-        transform: rotate(180deg);
+        border-radius: 0px;
+        background-color: #f00;
+        transform: rotate(360deg);
     }
 }
 
@@ -48,30 +53,85 @@ body {
     width: 250px;
     height: 250px;
     background: red;
-    margin: 200 auto;
+    margin: 200px 250px;
 
-    animation-name: animation2;
+    animation: rotate 2s infinite normal, shift 10s infinite normal, colorChange 4s infinite normal;
+    /* animation-name: rotate;
     animation-duration: 1s;
     animation-delay: 0.5s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
-    animation-direction: normal;
+    animation-direction: normal;  */
 }
 
-@keyframes animation2 {
+@keyframes rotate {
     0% {
         border-radius: 50% 0 50% 0;
-        background-color: red;
         transform: rotate(0deg);
+        /* margin-left: 250px; */
     }
     50% {
         border-radius: 50% 0 50% 0;
-        background-color: crimson;
         transform: rotate(90deg);
+        /* margin-left: 500px; */
     }
     100% {
         border-radius: 0 50% 0 50%;
-        background-color: red;
         transform: rotate(90deg);
+        /* margin-left: 500px; */
+    }
+}
+
+@keyframes shift {
+    0% {
+        margin-left: -250px;
+    }
+    10% {
+        margin-left: 0px;
+    }
+    20% {
+        margin-left: 0px;
+    }
+    30% {
+        margin-left: 250px;
+    }
+    40% {
+        margin-left: 250px;
+    }
+    50% {
+        margin-left: 500px;
+    }
+    60% {
+        margin-left: 500px;
+    }
+    70% {
+        margin-left: 750px;
+    }
+    80% {
+        margin-left: 750px;
+    }
+    90% {
+        margin-left: 1000px;
+    }
+    100% {
+        margin-left: 1000px;
+    }
+}
+
+@keyframes colorChange {
+    0% {
+        background: red;
+    }
+    25% {
+        background: red;
+    }
+    50% {
+        background: maroon;
+    }
+    75% {
+        background: maroon;
+    }
+    100% {
+        background: red;
     }
 }
