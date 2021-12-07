@@ -1,0 +1,46 @@
+nav ul {
+list-style-type: none;
+margin: 0;
+padding: 16px 0;
+overflow: hidden;
+background-color: #333;
+}
+
+nav li {
+display: inline;
+}
+
+nav li div {
+display: inline;
+color: white;
+text-align: center;
+padding: 16px;
+text-decoration: none;
+}
+
+nav li a {
+display: inline;
+color: white;
+text-align: center;
+padding: 16px;
+text-decoration: none;
+}
+nav li a:hover {
+background-color: #111;
+}
+
+
+body {
+    background-color: #aaa;
+}
+
+div.blogEntry {
+    background-color: #ddd;
+    margin: 10px;
+    padding: 10px;
+
+}
+
+body div h2 {
+    color: darkgreen;
+}
