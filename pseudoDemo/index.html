@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pylypenko | Pseudo Demo</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Web 2!</h1>
+        <h4>Today, we will mess with some Pseudo Classes and Elements</h4>
+
+        <hr>
+
+        <h2>Let's first get a better understanding of CSS</h2>
+        <p>if we think of CSS in terms of selectors, properties, and values, then a typical CSS entry would look like this:</p>
+
+        <pre>
+            <code>selector {property: value;}</code>
+        </pre>
+        <p>To style the above, we need to add two tags together. We call this CSS Combinators</p>
+
+        <hr>
+
+        <h2>What are Pseudo Classes?</h2>
+        <p>again, if we think of CSS in terms of selectors, properties, and values, then a pseudo class is an add-on to a selector</p>
+        <pre>
+            <code>selector:pseudoClass {property: value;}</code>
+        </pre>
+
+        <h4>We use these for links!</h4>
+        <p>If we want our <a href="#">link</a> to look different, we can simply add it in my CSS as follows:</p>
+        <pre>
+            <code>a {color: red;}</code>
+        </pre>
+        <p>But if we want each of our <a href="#">link states</a> to look different then we will use a pseudo class:</p>
+        <ul>
+            <li>:visited</li>
+            <li>:hover</li>
+            <li>:active</li>
+        </ul>
+        <p>Special <a href="#" class="special">link</a></p>
+
+        <h4>We can use pseudo classes on any tag!</h4>
+        <div id="hoverDiv">
+            <p>Here we will add hover to our div</p>
+            <p>asfagbyawefbuadcbyh</p>
+            <p>What do you think?</p>
+        </div>
+
+        <h4>We can even call on specific selectors depending on their hierarchy.</h4>
+        <p>Style in above div will change.</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,72 @@
+body {
+    background: grey;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+h1, h2, h4 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h4 {
+    font-size: 20px;
+}
+
+.container {
+    width: 1000px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px;
+}
+
+pre code {
+    background: #eee;
+    border: 2px solid #888;
+    display: block;
+    padding: 10px;
+    color: darkblue;
+}
+
+a {
+    color: red;
+}
+a:link {
+    color: red;
+}
+a:visited {
+    color: green;
+}
+a:hover {
+    color: aqua;
+}
+a:active {
+    color: magenta;
+}
+
+a.special {
+    color:darkgoldenrod;
+    font-size: 20px;    
+}
+a.special:hover {
+    color: darkblue;
+}
+
+#hoverDiv {
+    color: white;
+    background: blue;
+    padding: 10px;
+}
+
+#hoverDiv:hover {
+    background: black;
+}
+
+#hoverDiv p:first-child {
+    color: cornflowerblue;
+}
+#hoverDiv p:last-child {
+    font-weight: bold;
+}
+
+:hover {
+    background: hotpink;
+}
