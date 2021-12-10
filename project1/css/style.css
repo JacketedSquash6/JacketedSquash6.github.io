@@ -1,46 +1,90 @@
+:root {
+    /* --color1: #f4eea9;
+    --color2: #f0bb62;
+    --color3: #519259;
+    --color4: #064635; */
+    --color1: #e5dcc3;
+    --color2: #c7bea2;
+    --color3: #aaa492;
+    --color4: #9a9483;
+}
+
 nav ul {
-list-style-type: none;
-margin: 0;
-padding: 16px 0;
-overflow: hidden;
-background-color: #333;
+    list-style-type: none;
+    margin: 0;
+    padding: 16px 0;
+    overflow: hidden;
+    background-color: var(--color3);
 }
 
 nav li {
-display: inline;
+    display: inline;
 }
 
 nav li div {
-display: inline;
-color: white;
-text-align: center;
-padding: 16px;
-text-decoration: none;
+    display: inline;
+    color: black;
+    text-align: center;
+    padding: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: none;
+
 }
 
 nav li a {
-display: inline;
-color: white;
-text-align: center;
-padding: 16px;
-text-decoration: none;
+    display: inline;
+    color: black;
+    text-align: center;
+    padding: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: none;
 }
 nav li a:hover {
-background-color: #111;
+    background-color: var(--color4);
 }
 
 
 body {
-    background-color: #aaa;
+    background-color: var(--color2);
+}
+
+h1, h2 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    padding: 10px;
 }
 
 div.blogEntry {
-    background-color: #ddd;
+    background-color: var(--color1);
     margin: 10px;
-    padding: 10px;
+    padding: 5px 20px 10px 20px;
 
 }
 
-body div h2 {
-    color: darkgreen;
+div.blogEntry h2 {
+    color: var(--color4);
+}
+
+div.blogEntry img {
+    float: left;
+    margin: 0 30px 0 15px;
+}
+
+
+footer ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 16px 0;
+    overflow: hidden;
+    background-color: var(--color3);
+}
+
+footer li {
+    display: inline;
+    padding: 8px 16px;
+    border-right: 2px solid #9a9483;    
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
