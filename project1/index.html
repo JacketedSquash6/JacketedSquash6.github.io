@@ -7,6 +7,48 @@
     <title>Pylypenko | About Me</title>
 
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        .gridContainer {
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-gap: 10px;
+            background: #e5dcc3;
+            padding: 30px;
+            margin: 10px;
+        }
+        .item1 {
+            grid-column-start: 2;
+            grid-column-end: 3;
+            text-align: center;
+        }
+        .item2 {
+            grid-row-start: 1;
+            grid-row-end: 3;
+            grid-column-start: 1;
+            grid-column-end: 2;
+        }
+        .item3 {
+            padding: 0 25px;
+        }
+        div.button {
+            margin: 10px;
+            padding: 20px;
+            background-color: var(--color3);
+            border-radius: 10px;
+        }
+        div.button h4 {
+            margin: 0;
+        }
+        div.button a {
+            color: black;
+            text-align: center;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            text-decoration: none;
+        }
+        div.button:hover {
+            background-color: var(--color4);
+        }
+    </style>
 </head>
 <nav>
     <ul>
@@ -17,10 +59,27 @@
     </ul>
 </nav>
 <body>
-    <h1>About Me!</h1>
-    <p>About me Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, perspiciatis cupiditate 
-        voluptatem aspernatur veritatis eius dignissimos quis vero laborum atque maxime porro beatae quasi 
-        quibusdam optio omnis tenetur dolores! Doloremque?</p>
+    <h1>Home</h1>
+    <div class="gridContainer">
+        <div class="item1"><h2>About Me</h2></div>
+        <div class="item2"><img src="images/taras.jpg" alt="Picture of Taras" style="width:232px;height:309px"></div>
+        <div class="item3">
+            <p>
+                I have spent the last two and a half months consuming and researching the literature, film, and culture of the USA during the 1950s. I have put together this blog to talk about what I've seen
+                If anything looks unprofessional or out of place, that's because it's part of my artistic vision and you don't appreciate the deep societal meaning of that choice
+            </p>
+            <div class="button">
+                <a href="books.html">
+                    <h4>See my opinions on books!</h4>
+                </a>
+            </div>
+            <div class="button">
+                <a href="movies.html">
+                    <h4>See my opinions on movies!</h4>
+                </a>
+            </div>            
+        </div>
+    </div>
 </body>
 
 <footer>
