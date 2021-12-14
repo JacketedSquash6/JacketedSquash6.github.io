@@ -72,6 +72,9 @@ div.blogEntry img {
     margin: 0 30px 0 15px;
 }
 
+footer{
+    background: rgb(194, 163, 104);
+}
 
 footer ul {
     list-style-type: none;
