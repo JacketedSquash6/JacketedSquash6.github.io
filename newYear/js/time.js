@@ -21,7 +21,7 @@ function refresh() {
     document.getElementById("seconds").innerHTML = seconds;
 
     var remark = "Waitin' for the new year";
-    if (days > 7) {
+    if (days >= 7) {
         remark = "C'mon it's not even the week of. You're not <i>that</i> sick of this year";
     }
     else if (days > 0) {
