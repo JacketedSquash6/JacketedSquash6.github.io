@@ -1,3 +1,30 @@
+#nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 16px 0;
+    overflow: hidden;
+    background-color:cornsilk;
+}
 .menu-item {
     font-weight: bold;
+    display: inline;
+}
+.menu-item a {
+    display: inline;
+    color: black;
+    text-align: center;
+    padding: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: none;
+}
+.menu-item a:hover {
+    background-color:rgb(219, 213, 185);
+}
+
+body {
+    background-color: antiquewhite;
+}
+.container {
+    background-color: bisque;
+    margin: 10px 20px;
 }
