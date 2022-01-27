@@ -1,0 +1,96 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: grey;
+    padding: 0;
+}
+
+h1 {
+    font-size: 5vw;
+}
+h2 {
+    font-size: 2vw;
+}
+h3 {
+    font-size: 1.8vw;
+}
+p, a, footer, label, input, textarea {
+    font-size: 1.6vw;
+}
+
+.container {
+    float: left;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.header {
+    background-color: darkgrey;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.left {
+    float: left;
+    width: 20%;
+}
+
+.main {
+    float: left;
+    width: 60%;
+    padding: 0 20px;
+}
+
+.right {
+    float: left;
+    width: 20%;
+    background-color: darkgrey;
+    color: white;   
+    margin-top: 10px;
+    padding: 15px;
+}
+
+
+/* Nav Style */
+.nav a {
+    background-color: darkgray;
+    color: white;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 8px;
+    margin-top: 10px;
+}
+
+/* Footer Style*/
+.footer {
+    background-color: darkgrey;
+    color: white;
+    padding: 10px;
+    clear: both;
+}
+footer {
+    width: 60%;
+    margin: 0 auto;
+}
+
+/* Responsiveness*/
+@media only screen and (max-width:620px) {
+    .left, .main, .right {
+        width: 100%;
+    }
+}
+
+@media (min-width:621px) and (max-width: 1000px) {
+    .main {
+        width: 80%;
+    }
+    .right {
+        width: 100%;
+    }
+}
