@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pylypenko | Facelift</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- http://rapitblog.blogspot.com/ -->
+    
+    <div class="header" id="header">
+        <h1>La Trastienda</h1>
+    </div>
+
+    <div class="container">
+        <div class="dropNav">
+            <h4 onclick="showNav()" class="dropNavButton">Archivo del blog</h4>
+            <div id="dropNavContent" class="dropNavContent">
+                <a href="#">Marzo 2021 (2)</a>
+                <a href="#">Marzo 2020 (1)</a>
+                <a href="#">Febrero 2020 (1)</a>
+                <a href="#">Enero 2020 (1)</a>
+                <a href="#">Link 5</a>
+                <a href="#">Etc.</a>
+            </div>
+        </div>
+
+        <div class="feed">
+            <div class="entry">
+                <p class="entryDate">jueves, 18 de marzo de 2021</p>
+                <h3 class="entryTitle">CONVOCATORIA CUENTOS SOLIDARIOS: “CUENTA CONMIGO vol. 2”</h3>
+
+                <p class="entryContent">En 2014 se presentó uno de los libros más bonitos que ha lanzado Rapitbook. Se trata del libro “Cuenta conmigo. Cuentos para todos con fines solidarios”. Los escritores que participaron y Rapitbook colaboramos con la organización “Mater Misericordiae” para ceder los beneficios de su colección a las causas solidarias de dicha organización que trabajan con niños que necesitan de ayudas especiales.</p>
+                <p class="entryContent">Habiendo tardado más de lo que nos hubiera gustado, pero convencidos de la especial idoneidad del momento anunciamos la convocatoria de “CUENTA CONMIGO vol. 2”. De esta manera desde Rapitbook queremos aportar nuestro granito de arena apoyándonos en la gran riqueza humana de escritores con los que tenemos la suerte de colaborar.</p>
+                <p class="entryContent">En esta ocasión iremos de la mano de la entidad “Fundació Monti·sion Solidària”, asociación sin ánimo de lucro en la que, gracias a la ayuda solidaria de sus voluntarios reparten comida, juguetes y ropa entre los más desfavorecidos de Mallorca. Las peticiones de ayuda se les han disparado en los últimos meses habiendo tenido que cambiar a unas instalaciones mayores pero que aún deben mejorar sus equipamientos. </p>
+                <p class="entryContent">Buscamos cuentos de temática infantil de temática fantástica y una extensión no demasiado larga (sin un mínimo pero con un máximo recomendado de unas 3750 palabras aproximadamente, se recomienda brevedad). Tienes hasta el 19 de abril para mandarnos tu manuscrito.</p>
+                <p class="entryContent">Si estás interesado mándanos tu manuscrito a info@rapitbook.com, con una foto y una breve biografía para participar en el libro. También puedes enviarnos un formulario a través del siguiente enlace y nos pondremos en contacto contigo. Los escritores recibirán su ejemplar y estarán ayudando a quienes más lo necesitan. </p>
+            </div>
+            <div class="entry">
+                <p class="entryDate">miércoles, 10 de marzo de 2021</p>
+                <h3 class="entryTitle"> Nuestros escritores: Entrevista a Manuel Irurita</h3>
+
+                <p class="entryContent">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt error recusandae nisi aut, pariatur velit sed! Eius, vel. Deleniti libero illo veniam cumque, hic qui velit voluptatem mollitia minus voluptas? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident iste esse error deleniti magnam sapiente, distinctio minus voluptas modi quam repudiandae cupiditate, laboriosam beatae earum natus harum fuga. Ipsa, ratione. Lorem ipsum dolor sit amet consectetur, adipisicing elit. A atque nesciunt voluptate voluptas aperiam maiores, nobis amet quam, sapiente mollitia dicta fuga natus, possimus totam optio iste vel error necessitatibus.</p>
+                <p class="entryContent">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt error recusandae nisi aut, pariatur velit sed! Eius, vel. Deleniti libero illo veniam cumque, hic qui velit voluptatem mollitia minus voluptas? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident iste esse error deleniti magnam sapiente, distinctio minus voluptas modi quam repudiandae cupiditate, laboriosam beatae earum natus harum fuga. Ipsa, ratione. Lorem ipsum dolor sit amet consectetur, adipisicing elit. A atque nesciunt voluptate voluptas aperiam maiores, nobis amet quam, sapiente mollitia dicta fuga natus, possimus totam optio iste vel error necessitatibus.</p>
+                <p class="entryContent">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt error recusandae nisi aut, pariatur velit sed! Eius, vel. Deleniti libero illo veniam cumque, hic qui velit voluptatem mollitia minus voluptas? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident iste esse error deleniti magnam sapiente, distinctio minus voluptas modi quam repudiandae cupiditate, laboriosam beatae earum natus harum fuga. Ipsa, ratione. Lorem ipsum dolor sit amet consectetur, adipisicing elit. A atque nesciunt voluptate voluptas aperiam maiores, nobis amet quam, sapiente mollitia dicta fuga natus, possimus totam optio iste vel error necessitatibus.</p>
+            </div>
+        </div>
+
+        <div class="right">
+            <div class="rightNav">
+                <h4 class="rightNavHeader">Archivo del blog</h4>
+                <div class="rightNavContent">
+                    <a href="#">Marzo 2021 (2)</a>
+                    <a href="#">Marzo 2020 (1)</a>
+                    <a href="#">Febrero 2020 (1)</a>
+                    <a href="#">Enero 2020 (1)</a>
+                    <a href="#">Link 5</a>
+                    <a href="#">Etc.</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showNav() {
+            var currentDisplay = document.getElementById("dropNavContent").style.display;
+            if(currentDisplay == "" | currentDisplay == "none") {
+                document.getElementById("dropNavContent").style.display = "block";
+            }
+            else {
+                document.getElementById("dropNavContent").style.display = "none";
+            }
+            console.log(currentDisplay);
+        }
+    </script>
+</body>
+</html>
