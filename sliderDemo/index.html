@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pylypenko | Slider Demo</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>How to make a Slider between two Images</h1>
+        <p>While I was working on a website redesign for a renovation company,  I came across a tutorial online to put in the following effect:</p>
+
+        <div class="galleryItem">
+            <h2 class="header2">Sammamish House Addition: Before/After</h2>
+            <p style="text-align: center;">&larr; Drag the slider &rarr;</p>
+            <div class="beforeAfterContainer">
+                <div class="img afterImg"></div>
+                <div class="img beforeImg"></div>
+                <input type="range" min="0" max="100" value="50" class="slider" name="slider" id="slider" oninput="cropImage(this.value)">
+
+            </div>
+            <p style="text-align: center;">
+                original code sourced from 
+                <a href="https://levelup.gitconnected.com/how-to-create-a-before-after-image-slider-with-css-and-js-a609d9ba77bf">gitconnected</a>
+            </p>
+        </div>
+        <p>However, the original code uses SCSS. I wanted to show a less-convoluted way to make the effect with plain HTML/CSS</p>
+
+
+        
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            cropImage(document.getElementById("slider").value)
+        });
+
+        function cropImage(val) {
+            percent = val + "%";
+            document.getElementsByClassName("beforeImg")[0].style.width = percent;
+        }
+    </script>
+</body>
+</html>
