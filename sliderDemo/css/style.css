@@ -27,11 +27,11 @@ h1, h2{
 }
 
 .afterImg {
-    background-image: url("../images/p32_after.png");
+    background-image: url("../images/after.png");
 }
 
 .beforeImg {
-    background-image: url("../images/p32_before.png");
+    background-image: url("../images/before.png");
     width: 50%;
 }
 
