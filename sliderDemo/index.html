@@ -19,7 +19,6 @@
                 <div class="img afterImg"></div>
                 <div class="img beforeImg"></div>
                 <input type="range" min="0" max="100" value="50" class="slider" name="slider" id="slider" oninput="cropImage(this.value)">
-
             </div>
             <p style="text-align: center;">
                 original code sourced from 
@@ -30,9 +29,96 @@
         <h2>How does it work?</h2>
         <p>The broad overview is this: a first, sliding image is placed directly on top of a second, background image. A slider is put over top and linked to a piece of JS that updates the width of the foreground imgage in proportion to its value. This way, the further along the slider is, the more of the foreground image is visible, leading to the desired effect.</p>  
         <p>If you want to follow along, you can download the images of the house here:</p>
-        <a href="images/before.png" download="before.png">before.png</a>
+        <a href="images/before.png" download="before.png">before.png</a><br>
         <a href="images/after.png" download="after.png">after.png</a>
         <h4>Let's Get Started!</h4>
+
+        <h2>HTML:</h2>
+        <pre>
+            <code>
+&lt;h2 class="header2"&gt;Sammamish House Addition: Before/After&lt;/h2&gt;
+&lt;p style="text-align: center;"&gt;&amp;larr; Drag the slider &amp;rarr;&lt;/p&gt;
+&lt;div class="beforeAfterContainer"&gt;
+    &lt;div class="img afterImg"&gt;&lt;/div&gt;
+    &lt;div class="img beforeImg"&gt;&lt;/div&gt;
+    &lt;input type="range" min="0" max="100" value="50" class="slider" name="slider" id="slider" oninput="cropImage(this.value)"&gt;
+&lt;/div&gt;
+            </code>
+        </pre>
+
+        <h2>CSS:</h2>
+        <pre>
+            <code>
+.beforeAfterContainer {
+    position: relative;
+    width: 1046px; /* Your image width */
+    height: 686px; /* Your image height */
+    border: 4px solid burlywood; /* Your aesthetic preference */
+    margin: auto;
+}
+
+.img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: 1046px 100%; /* The first value should be your width instead of "100%". if it were 100%, the image would squeeze when shortened instead of being sliced */
+}
+
+.afterImg {
+    background-image: url("../images/after.png"); /* Or wherever your image is stored */
+}
+
+.beforeImg {
+    background-image: url("../images/before.png"); /* Or wherever your image is stored */
+    width: 50%;
+}
+
+.slider {
+    position: absolute;
+    width: 100%;
+    height: 0%;
+    margin-top: 343px; /* Half of your image height */
+}
+
+.slider::-moz-range-thumb {
+    width: 6px;
+    height: 686px;/* Your image height */
+    background: white;
+    cursor: pointer;
+}
+            </code>
+        </pre>
+
+        <h2>JS:</h2>
+        <code>
+            <pre>
+document.addEventListener("DOMContentLoaded", function() {
+    cropImage(document.getElementById("slider").value)
+});
+
+function cropImage(val) {
+    percent = val + "%";
+    document.getElementsByClassName("beforeImg")[0].style.width = percent;
+}
+            </pre>
+        </code>
+        <h4>You can put this in a script tag at the bottom of your html, or in a separate "main.js" file</h4>
+        <p>For the former option, do this:</p>
+
+        <code>
+            <pre>
+&lt;body&gt;
+    &lt;!-- Main HTML --&gt;
+
+    &lt;script&gt;
+        /* Your Code */
+    &lt;/script&gt;
+&lt;/body&gt;
+            </pre>
+        </code>
+
     </div>
 
     <script>
