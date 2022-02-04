@@ -9,11 +9,13 @@
 </head>
 <body>
     <div class="container">
-        <h1>How to make a Slider between two Images</h1>
-        <p>While I was working on a website redesign for a renovation company,  I came across a tutorial online to put in the following effect, however, the original code uses SCSS. I wanted to show a less-convoluted way to make the effect with plain HTML/CSS</p>
+        <h1>How to make a Slider between two Images in Firefox</h1>
+        <div class="textBlock">
+            <p>While I was working on a website redesign for a renovation company,  I came across a tutorial online to put in the following effect, however, the original code uses SCSS. I wanted to show a less-convoluted way to make the effect with plain HTML/CSS</p>
+        </div>
 
         <div class="galleryItem">
-            <h2 class="header2">Sammamish House Addition: Before/After</h2>
+            <h2>Sammamish House Addition: Before/After</h2>
             <p style="text-align: center;">&larr; Drag the slider &rarr;</p>
             <div class="beforeAfterContainer">
                 <div class="img afterImg"></div>
@@ -26,16 +28,187 @@
             </p>
         </div>
 
-        <h2>How does it work?</h2>
-        <p>The broad overview is this: a first, sliding image is placed directly on top of a second, background image. A slider is put over top and linked to a piece of JS that updates the width of the foreground imgage in proportion to its value. This way, the further along the slider is, the more of the foreground image is visible, leading to the desired effect.</p>  
-        <p>If you want to follow along, you can download the images of the house here:</p>
-        <a href="images/before.png" download="before.png">before.png</a><br>
-        <a href="images/after.png" download="after.png">after.png</a>
-        <h4>Let's Get Started!</h4>
+        <div class="textBlock">
+            <h2>How does it work?</h2>
+            <p>The broad overview is this: a first, sliding image is placed directly on top of a second, background image. A slider is put over top and linked to a piece of JS that updates the width of the foreground imgage in proportion to its value. This way, the further along the slider is, the more of the foreground image is visible, leading to the desired effect.</p>  
+            <p>If you want to follow along, you can download the images of the house here:</p>
+            <a href="images/before.png" download="before.png">before.png</a><br>
+            <a href="images/after.png" download="after.png">after.png</a>
+            <h4>Let's Get Started!</h4>
+        </div>
+        
+        <div class="textBlock">
+            <h2>1. Putting the Images Together</h2>
+            <h4>Let's make a div that will hold our two images</h4>
+            <p>We will use divs with image backgrounds instead of the HTML image tags. You'll see in a second why this is a better choice</p>
+            <p>The div should have width and height <b>matching those of our images</b> and optionally a border</p>
+            <p>Also, we want both of these images to be in the exact same place. We can do this by setting their position to absolute and setting both of their positions at (0,0)</p>
+            <p>The background-size attribute tells HTML how big to draw the background of the div. By drawing the full-width image on a partial-width div, we can slice the image</p>
+        </div>
 
-        <h2>HTML:</h2>
-        <pre>
-            <code>
+        <div class="codeBlock">
+            <p>HTML:</p>
+            <pre>
+                <code>
+<span class="newCode">
+&lt;div class="beforeAfterContainer"&gt;
+    &lt;div class="img afterImg"&gt;&lt;/div&gt;
+    &lt;div class="img beforeImg"&gt;&lt;/div&gt;
+&lt;/div&gt;  
+</span>
+                </code>
+            </pre>
+        </div>
+
+        <div class="codeBlock">
+            <p>CSS:</p>
+            <pre>
+                <code>
+<span class="newCode">
+.beforeAfterContainer {
+    position: relative;
+    width: 1046px;
+    height: 686px;
+    border: 4px solid burlywood;
+    margin: auto;
+}
+
+.img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: 1046px 100%;
+}
+
+.afterImg {
+    background-image: url("../images/after.png");
+}
+
+.beforeImg {
+    background-image: url("../images/before.png");
+    width: 50%;
+}
+</span>
+                </code>
+            </pre>
+        </div>
+
+        <div class="galleryItem">
+            <div class="beforeAfterContainer">
+                <div class="img afterImg"></div>
+                <div class="img beforeImg"></div>
+            </div>
+        </div>
+
+        <div class="textBlock">
+            <h4>Cool. We have a fraction of an image showing, as desired. However, it is still not interactive</h4>
+        </div>
+
+        <div class="textBlock">
+            <h2>2. Adding the slider</h2>
+            <p>Input sliders are notoriously difficult to work with and customize, so we will be making as few changes as possible to their appearance. First, let's just get it in the right place, and we'll worry about making the image move later</p>
+        </div>
+
+        <div class="codeBlock">
+            <p>HTML:</p>
+            <pre>
+                <code>
+&lt;div class="beforeAfterContainer"&gt;
+    &lt;!-- ... --&gt;
+    <span class="newCode">    &lt;input type="range" min="0" max="100" value="50" class="slider" name="slider" id="slider" &gt;</span>
+&lt;/div&gt;
+
+                </code>
+            </pre>
+        </div>
+        <div class="codeBlock">
+            <p>CSS:</p>
+            <pre>
+                <code>
+/* ... */
+<span class="newCode">
+.slider {
+    position: absolute;
+    width: 100%;
+    height: 0%;
+    margin-top: 343px;
+}
+
+.slider::-moz-range-thumb {
+    width: 6px;
+    height: 686px;
+    background: white;
+    cursor: pointer;
+}
+</span>
+                </code>
+            </pre>
+        </div>
+
+        <div class="galleryItem">
+            <div class="beforeAfterContainer">
+                <div class="img afterImg"></div>
+                <div class="img beforeImg"></div>
+                <input type="range" min="0" max="100" value="50" class="slider" name="slider2" id="slider2">
+            </div>
+        </div>
+
+        <div class="textBlock">
+            <h4>Great! now we just need to write some JS to make the image move.</h4>
+        </div>
+
+        <div class="textBlock">
+            <h2>3. Making the image move</h2>
+            <p>Our JavaScript will find our div.beforeImg by its class, and set its width proportional to the slider's current position</p>
+            <p>There is also another problem you might encounter: moving the slider will move the image, but the slider and image may start in different places when the page loads. We can use addEventListener to make sure the width is updated when the page finishes loading</p>
+        </div>
+
+        <div class="codeBlock">
+            <p>JS:</p>
+            <pre>
+                <code>
+<span class="newCode">
+document.addEventListener("DOMContentLoaded", function() {
+    cropImage(document.getElementById("slider").value)
+});
+
+function cropImage(val) {
+    percent = val + "%";
+    document.getElementsByClassName("beforeImg")[0].style.width = percent;
+}
+</span>
+                </code>
+            </pre>
+        </div>
+
+        <div class="codeBlock">
+            <p>HTML:</p>
+            <pre>
+                <code>
+&lt;div class="beforeAfterContainer"&gt;
+    &lt;!-- ... --&gt;
+    &lt;input type="range" min="0" max="100" value="50" class="slider" name="slider" id="slider" <span class="newCode">oninput="cropImage(this.value)"</span>&gt;
+&lt;/div&gt;
+                </code>
+            </pre>
+        </div>
+
+        <div class="textBlock">
+            <h4>And that should be all you need to get it working!</h4>
+        </div>
+
+        <div class="textBlock">
+            <h2>4. All together</h2>
+            <p>If you were too lazy to do the code in order, here it is all in one place:</p>
+        </div>
+
+        <div class="codeBlock">
+            <p>HTML:</p>
+            <pre>
+                <code>
+<span class="newCode">
 &lt;h2 class="header2"&gt;Sammamish House Addition: Before/After&lt;/h2&gt;
 &lt;p style="text-align: center;"&gt;&amp;larr; Drag the slider &amp;rarr;&lt;/p&gt;
 &lt;div class="beforeAfterContainer"&gt;
@@ -43,12 +216,16 @@
     &lt;div class="img beforeImg"&gt;&lt;/div&gt;
     &lt;input type="range" min="0" max="100" value="50" class="slider" name="slider" id="slider" oninput="cropImage(this.value)"&gt;
 &lt;/div&gt;
-            </code>
-        </pre>
+</span>
+                </code>
+            </pre>
+        </div>
 
-        <h2>CSS:</h2>
-        <pre>
-            <code>
+        <div class="codeBlock">
+            <p>CSS:</p>
+            <pre>
+                <code>
+<span class="newCode">
 .beforeAfterContainer {
     position: relative;
     width: 1046px; /* Your image width */
@@ -88,12 +265,16 @@
     background: white;
     cursor: pointer;
 }
-            </code>
-        </pre>
+</span>
+                </code>
+            </pre>
+        </div>
 
-        <h2>JS:</h2>
-        <code>
+        <div class="codeBlock">
+            <p>JS:</p>
             <pre>
+                <code>
+<span class="newCode">
 document.addEventListener("DOMContentLoaded", function() {
     cropImage(document.getElementById("slider").value)
 });
@@ -102,13 +283,23 @@ function cropImage(val) {
     percent = val + "%";
     document.getElementsByClassName("beforeImg")[0].style.width = percent;
 }
+</span>
+                </code>
             </pre>
-        </code>
-        <h4>You can put this in a script tag at the bottom of your html, or in a separate "main.js" file</h4>
-        <p>For the former option, do this:</p>
+        </div>
 
-        <code>
+        <div class="textBlock">
+            <h2>5. Help with JS</h2>
+            <h4>This is also one of the first times I have used JS, so if you, like me, are not completely sure how to use it, here is some help.</h4>
+            <p>You can put any code you use in a script tag at the bottom of your html, or in a separate "main.js" file</p>
+            <p>For the former option, do this:</p>
+        </div>
+        
+        <div class="codeBlock">
+            <p>HTML:</p>
             <pre>
+                <code>
+<span class="newCode">
 &lt;body&gt;
     &lt;!-- Main HTML --&gt;
 
@@ -116,8 +307,10 @@ function cropImage(val) {
         /* Your Code */
     &lt;/script&gt;
 &lt;/body&gt;
+</span>
+                </code>
             </pre>
-        </code>
+        </div>
 
     </div>
 

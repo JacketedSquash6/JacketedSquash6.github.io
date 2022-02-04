@@ -3,6 +3,34 @@ h1, h2{
     text-align: center;
 }
 
+body {
+    background-color: white;
+}
+
+.textBlock {
+    background-color: antiquewhite;
+    width: 90%;
+    margin: 10px auto;
+    padding: 10px;
+}
+
+.codeBlock {
+    background-color: lightblue;
+    overflow: auto;
+    width: 90%;
+    margin: 10px auto;
+    padding: 10px;
+}
+
+.codeBlock code {
+    display: inline;
+    color: gray; /* By default, old code will be in gray */
+}
+
+.newCode {
+    color: black; /* In a given codeBlock, any new code will be tagged .newCode so it shows up black (mmore visible)*/
+}
+
 .galleryItem {
     background-color: antiquewhite;
     margin: 20px;
