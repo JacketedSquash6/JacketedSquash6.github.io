@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pylypenko | Demos</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <script>src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"</script>
+    <script>
+        $("#slideShow > div:gt(0)").hide();
+
+        setInterval(function() {
+            $('#slideShow > div:first')
+                .fadeOut(1000)
+                .next()
+                .fadeIn(1000)
+                .end()
+                .appendTo('#slideShow');
+        }, 3000);
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>This is a test page for all my classmates' demos</h1>
+        <div id="darkModeTest">
+            <h4>Dark Mode Test (From Keso)</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate officia iusto laudantium officiis. Id, ipsa. Soluta nesciunt, vitae minima laboriosam adipisci repellat, nostrum iure quisquam, necessitatibus a dignissimos dolorem reprehenderit.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate similique, quidem ipsa eveniet molestias iusto explicabo obcaecati nisi saepe aspernatur modi quae ipsum eius aliquid, nesciunt tempore alias eligendi ratione! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas tenetur assumenda nemo est, culpa ducimus suscipit quam accusamus quos reiciendis labore eligendi nostrum necessitatibus autem esse iste itaque repellendus quis!</p>
+            <button onclick="darkMode()">Switch to dark mode</button>
+
+            <h4>Conclusion:</h4>
+            <p>The demo was easy to follow given the constraints I know we were under. I would have liked more copiable code; for example by using "&amp;lt;" for "&lt;" to show up on the website</p>
+        </div>
+
+        <div id="parallaxTest">
+            <h4>Parallax Test (From Akash)</h4>
+            <div class="parallax">
+                <div class="parallaxLayer parallaxLayerBack">
+                    <div class="title">This is the background</div>
+                </div>
+                <div class="parallaxLayer parallaxLayerBase">
+                    <div class="title">This is the foreground</div>
+                </div>
+            </div>
+            <h4>Conclusion:</h4>
+            <p>I don't completely understand every line of code, but copying it worked fine and I was able to modify it to my needs, so I approve</p>
+        </div>
+
+        <div id="slideShowTest">
+            <h4>Auto-slideshow Test (From Jack)</h4>
+            <div id="slideShow">
+                <div>
+                    Text 1
+                </div>
+                <div>
+                    Text 2
+                </div>
+                <div>
+                    Text 3
+                </div>
+                <div>
+                    Text 4
+                </div>
+            </div>
+            <h4>Conclusion:</h4>
+            <p>Didn't work :(</p>
+        </div>
+    </div>
+
+    <script>
+        function darkMode() {
+            var element = document.getElementById("darkModeTest");
+            element.classList.toggle("darkMode");
+        }
+    </script>
+    
+</body>
+</html>
