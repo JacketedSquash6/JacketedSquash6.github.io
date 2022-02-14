@@ -82,6 +82,35 @@ a.rainbowLink {
 }
 
 
+/* Inline Links */
+.inlineLink {
+    margin: 0;
+    color: #ddd;
+    text-decoration: none;
+}
+.inlineLink:hover {
+    animation-name: colorCycle;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+	animation-timing-function: linear; 
+}
+
+@keyframes colorCycle {
+	0% {
+		color: #ff0;
+	}
+	33% {
+		color: #f0f;
+	}
+	67% {
+		color: #0ff;
+	}
+	100% {
+		color: #ff0;
+	}
+}
+
 
 /* Body */
 .content {
@@ -91,7 +120,7 @@ a.rainbowLink {
     margin: 40px 50vw 0 5vw;
     padding: 15px;
 }
-.content * {
+.content > * {
     margin: 6px;
 }
 
@@ -123,8 +152,8 @@ a.rainbowLink {
 /* Background image */
 #backgroundImage {
     position: fixed;
-    height: 200vh;
+    height: 180vh;
     right: -10vw;
-    top: -30vh;
+    top: -15vh;
     z-index: -10;
 }
