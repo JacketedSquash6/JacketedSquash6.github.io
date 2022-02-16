@@ -134,9 +134,10 @@ nav {
     margin: 0;
     padding: 16px 0;
     overflow: hidden;
+    transition: max-height 1.5s;
 }
 #navList.navHidden {
-    height: auto; /*Can't be hidden in full-width mode*/
+    max-height: 100vh; /*Can't be hidden in full-width mode*/
 }
 .navItem {
     font-weight: bold;
@@ -199,8 +200,8 @@ nav {
         background-repeat: no-repeat;
     }
 
-    a.rainbowLink, .content{
-        margin: 100px auto;
+    a.rainbowLink, .content, .footer{
+        margin: 30px;
     }
     .rainbowBox {
         display: none;
@@ -213,15 +214,13 @@ nav {
     }
     #navHamburger i {
         margin: 10px;
-        float: right;
     }
     #navList {
         padding: 0;
-        height: auto;
+        max-height: 100vh;
     }
     #navList.navHidden {
-        height: 0; 
-        transition: height 1s;
+        max-height: 0;
     }
     .navItem {
         display: block;

@@ -13,24 +13,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
-    <!--
     <div w3-include-html="nav.html"></div>
-    -->
-    <nav>
-        <a href="javascript:void(0);" class="icon" id="navHamburger" onclick="toggleTopNav()">
-            <i class="fa fa-bars"></i>
-        </a>
-        <ul id="navList" class="navHidden">
-            <li class="navItem"><a href="index.html">Home</a></li>
-            <li class="navItem"><a href="about.html">About</a></li>
-            <li class="navItem"><a href="python.html">Python</a></li>
-            <li class="navItem"><a href="websites.html">Websites</a></li>
-            <li class="navItem"><a href="pricing.html">Pricing</a></li>
-            <li class="navItem"><a href="contact.html">Contact</a></li>
-        </ul>
-
-    </nav>
-    <!--nav temporarily copy-pasted in-->
     
     <img id="backgroundImage" src="images/congrats_on_finding_the_secret_image_name.png" alt="a picture of me">
 
@@ -53,6 +36,7 @@
         </div>
     </div>
 
+    
     <div w3-include-html="footer.html"></div>
 
     <script>
@@ -69,7 +53,6 @@
             else {
                 element.classList.add("navHidden");
             }
-            console.log(currentHeight);
         }
     </script>
 </body>
