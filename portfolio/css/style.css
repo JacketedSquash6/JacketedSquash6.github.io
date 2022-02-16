@@ -126,27 +126,40 @@ a.rainbowLink {
 
 
 /* Nav */
-#nav {
+nav {
+    background-color:rgb(170, 170, 170);
+}
+#navList {
     list-style-type: none;
     margin: 0;
     padding: 16px 0;
     overflow: hidden;
-    background-color:rgb(170, 170, 170);
 }
-.menu-item {
+#navList.navHidden {
+    height: auto; /*Can't be hidden in full-width mode*/
+}
+.navItem {
     font-weight: bold;
     display: inline;
 }
-.menu-item a {
+.navItem {
     display: inline;
-    color: white;
     text-align: center;
-    padding: 16px;
+    padding: 18px;
+}
+.navItem:hover {
+    background-color:#888;
+}
+.navItem a {
+    color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-decoration: none;
 }
-.menu-item a:hover {
-    background-color:#888;
+
+#navHamburger {
+    display: none;
+    color: white;
+
 }
 
 /* Footer */
@@ -157,8 +170,7 @@ a.rainbowLink {
     margin: 40px 50vw 0 5vw;
     padding: 15px;
 
-    position: absolute;
-    bottom: 4vh;
+    position: static
 }
 
 /* Background image */
@@ -168,4 +180,57 @@ a.rainbowLink {
     right: -10vw;
     top: -15vh;
     z-index: -10;
+}
+
+/* Responsiveness*/
+@media only screen and (max-width:620px) { /* Vertical Phone */
+    #backgroundImage {
+        display: none;
+    }
+    
+    body {
+        background-image: url(../images/congrats_on_finding_the_secret_image_name.png);
+        background-attachment: fixed;
+        background-size: cover;
+        display: grid;
+        justify-content: center;
+        height: 100vh;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    a.rainbowLink, .content{
+        margin: 100px auto;
+    }
+    .rainbowBox {
+        display: none;
+    }
+
+
+    /* Nav */
+    #navHamburger {
+        display: block;
+    }
+    #navHamburger i {
+        margin: 10px;
+        float: right;
+    }
+    #navList {
+        padding: 0;
+        height: auto;
+    }
+    #navList.navHidden {
+        height: 0; 
+        transition: height 1s;
+    }
+    .navItem {
+        display: block;
+        margin: 0;
+        padding: 10px 0;
+        text-align: center;
+    }
+}
+
+@media (min-width:621px) and (max-width: 1000px) { /* Tablet / Horizontal Phone */
+    
 }
