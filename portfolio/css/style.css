@@ -165,13 +165,37 @@ nav {
 
 /* Footer */
 .footer {
+    position: absolute;
+    bottom: 0;
+
     background-color: rgb(170, 170, 170);
-    border-radius: 15px;
+    border-radius: 15px 15px 0 0;
 
-    margin: 40px 50vw 0 5vw;
+    margin: 40px 25vw 0 7vw;
     padding: 15px;
+}
+footer p {
+    margin: 0 0 8px;
+}
+footer i {
+    margin: 4px
+}
 
-    position: static
+/* Icon Colors */
+.socialMediaLink {
+    color: white;
+}
+.bi-facebook:hover {
+    color: #3b5998;
+}
+.bi-twitter:hover {
+    color: #1DA1F2;
+}
+.bi-github:hover {
+    color: #171515;
+}
+.bi-linkedin:hover {
+    color: #0E76A8;
 }
 
 /* Background image */
@@ -200,20 +224,23 @@ nav {
         background-repeat: no-repeat;
     }
 
-    a.rainbowLink, .content, .footer{
+    a.rainbowLink, .content {
         margin: 30px;
     }
     .rainbowBox {
         display: none;
     }
 
+    .footer {
+        position: static;
+        margin: 30px 30px 0;
+    }
+
 
     /* Nav */
     #navHamburger {
         display: block;
-    }
-    #navHamburger i {
-        margin: 10px;
+        padding: 10px;
     }
     #navList {
         padding: 0;
