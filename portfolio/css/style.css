@@ -153,9 +153,6 @@ nav {
 .navItem {
     font-weight: bold;
     display: inline;
-}
-.navItem {
-    display: inline;
     text-align: center;
     padding: 18px;
 }
