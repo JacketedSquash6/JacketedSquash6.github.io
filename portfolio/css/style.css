@@ -1,7 +1,7 @@
 /* General Style */
-
 * {
     box-sizing: border-box;
+    --main-color: rgb(150, 150, 150);
 }
 html {
     height: 100%;
@@ -15,7 +15,6 @@ body {
     background-color: rgb(206, 206, 206);
     color: white;
 }
-
 .container {
     flex: 1 0 auto;
 }
@@ -24,7 +23,7 @@ body {
 .header {
     font-size: large;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: rgb(170, 170, 170);
+    background-color: var(--main-color);
 
     height: 100%;
     width: 100%;
@@ -125,7 +124,7 @@ a.rainbowLink {
 
 /* Body */
 .content {
-    background-color: rgb(170, 170, 170);
+    background-color: var(--main-color);
     border-radius: 15px;
 
     margin: 40px 50vw 0 5vw;
@@ -138,7 +137,7 @@ a.rainbowLink {
 
 /* Nav */
 nav {
-    background-color:rgb(170, 170, 170);
+    background-color: var(--main-color);
     height: fit-content;
 }
 #navList {
@@ -177,7 +176,7 @@ nav {
 
 /* Footer */
 .footer {
-    background-color: rgb(170, 170, 170);
+    background-color: var(--main-color);
     border-radius: 15px 15px 0 0;
     width: fit-content;
 
