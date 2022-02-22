@@ -141,9 +141,10 @@ nav {
     height: fit-content;
 }
 #navList {
+    display: flex;
     list-style-type: none;
     margin: 0;
-    padding: 16px 0;
+    padding: 0;
     overflow: hidden;
     transition: max-height 1.5s;
 }
@@ -156,9 +157,7 @@ nav {
     text-align: center;
     padding: 18px;
 }
-.navItem:hover {
-    background-color:#888;
-}
+
 .navItem a {
     color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -169,6 +168,34 @@ nav {
     display: none;
     color: white;
 
+}
+
+/* Nav Color Fill */
+li.navItem {
+    transition: box-shadow 0.5s;
+    box-shadow: inset 0 0 0 0 var(--hover);
+}
+li.navItem:hover {
+    box-shadow: inset 0 4em 0 0 var(--hover);
+}
+
+li.navItem:nth-child(1) {
+    --hover: #d0d;
+}
+li.navItem:nth-child(2) {
+    --hover: #d77;
+}
+li.navItem:nth-child(3) {
+    --hover: #dd0;
+}
+li.navItem:nth-child(4) {
+    --hover: #7d7;
+}
+li.navItem:nth-child(5) {
+    --hover: #0dd;
+}
+li.navItem:nth-child(6) {
+    --hover: #77d;
 }
 
 /* Footer */
@@ -244,7 +271,7 @@ footer i {
         padding: 10px;
     }
     #navList {
-        padding: 0;
+        flex-direction: column;
         max-height: 100vh;
     }
     #navList.navHidden {
@@ -255,6 +282,11 @@ footer i {
         margin: 0;
         padding: 10px 0;
         text-align: center;
+    }
+
+    /* Nav Animation */
+    li.navItem:hover {
+        box-shadow: inset 100vw 0 0 0 var(--hover);
     }
 
     /* Footer */
