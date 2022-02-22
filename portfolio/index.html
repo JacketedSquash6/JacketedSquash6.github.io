@@ -13,25 +13,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
-    <!--
     <div w3-include-html="nav.html"></div>
-    -->
-    <nav>
-        <a href="javascript:void(0);" class="icon" id="navHamburger" onclick="toggleTopNav()">
-            <i class="bi bi-list"></i>
-        </a>
-        <ul id="navList" class="navHidden">
-            <li class="navItem"><a href="index.html">Home</a></li>
-            <li class="navItem"><a href="about.html">About</a></li>
-            <li class="navItem"><a href="python.html">Python</a></li>
-            <li class="navItem"><a href="websites.html">Websites</a></li>
-            <li class="navItem"><a href="pricing.html">Pricing</a></li>
-            <li class="navItem"><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
-    <!--Nav temporarily copied in-->
-
-
+    
     <img id="backgroundImage" src="images/congrats_on_finding_the_secret_image_name.png" alt="a picture of me">
 
     <div class="container">
@@ -53,34 +36,12 @@
         </div>    
     </div>
 
-    <!--
     <div w3-include-html="footer.html"></div>
-    -->
-    <div class="footer">
-        <footer>
-            <p>&copy; 2022 No Rights Reserved</p>
-            <a href="#" class="socialMediaLink"><i class="bi bi-facebook"></i></a>
-            <a href="#" class="socialMediaLink"><i class="bi bi-twitter"></i></a>
-            <a href="#" class="socialMediaLink"><i class="bi bi-github"></i></a>
-            <a href="#" class="socialMediaLink"><i class="bi bi-linkedin"></i></a>
-        </footer>
-    </div>
-    <!--Footer temporarily copied in-->
 
     <script>
         w3.includeHTML();
     </script>
 
-    <script>
-        function toggleTopNav() {
-            var element = document.getElementById("navList")
-            if(element.classList.contains("navHidden")) {
-                element.classList.remove("navHidden");
-            }
-            else {
-                element.classList.add("navHidden");
-            }
-        }
-    </script>
+    <script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>
