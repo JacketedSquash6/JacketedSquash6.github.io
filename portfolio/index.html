@@ -11,6 +11,31 @@
 
     <script src="https://www.w3schools.com/lib/w3.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <style>
+        /* Background image */
+        #backgroundImage {
+            position: fixed;
+            height: 180vh;
+            right: -10vw;
+            top: -15vh;
+            z-index: -10;
+        }
+
+        @media only screen and (max-width:620px) {  
+            #backgroundImage {
+                display: none;
+            }  
+            body {
+                background-image: url(images/congrats_on_finding_the_secret_image_name.png);
+                background-attachment: fixed;
+                background-size: cover;
+                justify-content: center;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+        }
+    </style>
 </head>
 <body>
     <div w3-include-html="nav.html"></div>
@@ -30,7 +55,7 @@
             <div class="rainbowBox yellowBox"></div>
         </a>
         
-        <div class="content">
+        <div class="content sideContent">
             <p>I am a high-school senior interested in all things computers. Whether it's a small, single-use script, a sprawling machine-learning project, a website, or a robot, I probably have something to say and something to add.</p>
             <p>Check out <a href="python.html" class="inlineLink">My Past Projects</a> or <a href="pricing.html" class="inlineLink">Get A Quote</a>.</p>
         </div>    
