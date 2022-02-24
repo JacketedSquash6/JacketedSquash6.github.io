@@ -205,10 +205,12 @@ nav {
     font-weight: bold;
     display: inline;
     text-align: center;
-    padding: 18px;
+    padding: 0;
 }
 
 .navItem a {
+    display: block;
+    padding: 18px;
     color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-decoration: none;
