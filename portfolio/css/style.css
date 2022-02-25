@@ -294,7 +294,6 @@ footer i {
         display: none;
     }
 
-
     /* Nav */
     #navHamburger {
         display: block;
@@ -310,13 +309,17 @@ footer i {
     .navItem {
         display: block;
         margin: 0;
-        padding: 10px 0;
         text-align: center;
     }
 
     /* Nav Animation */
     li.navItem:hover {
         box-shadow: inset 100vw 0 0 0 var(--hover);
+    }
+
+    /* Galleries */
+    .galleryItem .galleryLabel {
+        max-height: 100%;
     }
 
     /* Footer */
