@@ -21,7 +21,29 @@
                 <h1>Contact</h1>
             </div>
         </div>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim at officia sequi corrupti quaerat non cum dolore dolores facere, debitis dolorum quidem ratione dolorem, reprehenderit provident laudantium. Reiciendis, dolore pariatur.</p>
+
+        <div class="content">
+            <form action="https://getform.io/f/3ded7eae-9687-40d3-8a8e-8db15037199d" method="POST">
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" required><br>
+
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required><br>
+
+                <p>Purpose:</p>
+                <input type="radio" id="service" name="reasonForContact" value="service">
+                <label for="service">Request a Service</label><br>
+                <input type="radio" id="employment" name="reasonForContact" value="employment">
+                <label for="employment">Employment Opportunity</label><br>
+                <input type="radio" id="other" name="reasonForContact" value="other">
+                <label for="other">Other</label><br>
+
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" required></textarea><br>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+        
     </div>
 
     <div w3-include-html="footer.html"></div>

@@ -286,10 +286,19 @@ footer i {
 }
 
 /* Responsiveness*/
-@media only screen and (max-width:800px) { /* Vertical Phone */
+@media only screen and (max-width:800px) { /* Tablet / Horizontal Phone */
+    /* Margins etc. */
     a.rainbowLink, .content {
         margin: 30px;
     }
+    .headerCenterer {
+        margin: 30px 30px 10px;
+    }
+    .galleryGrid {
+        margin: 0 10px;
+    }
+
+    /* Rainbow Link */
     .rainbowBox {
         display: none;
     }
@@ -331,6 +340,6 @@ footer i {
     }
 }
 
-@media (min-width:621px) and (max-width: 1000px) { /* Tablet / Horizontal Phone */
+@media (min-width:621px) and (max-width: 1000px) { 
     
 }
