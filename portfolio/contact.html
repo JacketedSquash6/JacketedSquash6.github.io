@@ -11,6 +11,26 @@
 
     <script src="https://www.w3schools.com/lib/w3.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <style>
+        .contactFlex {
+            display: flex;
+            flex-direction: row-reverse;
+            flex-wrap: nowrap;
+            margin: 0 30px;
+        }
+        .contactFlex > div {
+            flex-basis: 100%;
+            margin: 5px;
+        }
+
+        @media only screen and (max-width:800px) {
+            .contactFlex {
+                flex-wrap: wrap;
+                margin: 0 10px;
+            }
+        }
+    </style>
 </head>
 <body>
     <div w3-include-html="nav.html"></div>
@@ -22,27 +42,42 @@
             </div>
         </div>
 
-        <div class="content">
-            <form action="https://getform.io/f/3ded7eae-9687-40d3-8a8e-8db15037199d" method="POST">
-                <label for="name">Name:</label><br>
-                <input type="text" id="name" name="name" required><br>
-
-                <label for="email">Email:</label><br>
-                <input type="email" id="email" name="email" required><br>
-
-                <p>Purpose:</p>
-                <input type="radio" id="service" name="reasonForContact" value="service">
-                <label for="service">Request a Service</label><br>
-                <input type="radio" id="employment" name="reasonForContact" value="employment">
-                <label for="employment">Employment Opportunity</label><br>
-                <input type="radio" id="other" name="reasonForContact" value="other">
-                <label for="other">Other</label><br>
-
-                <label for="message">Message:</label><br>
-                <textarea id="message" name="message" required></textarea><br>
-                <button type="submit">Send</button>
-            </form>
+        <div class="contactFlex">
+            <div class="content" id="links">
+                <h2>Reach Out to Me!</h2>
+                <p>email: taraspylypenko@gmail.com</p>
+                <p>address: 123 Sesame St.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem odio, inventore asperiores cum eos omnis explicabo, enim neque molestiae cupiditate provident quod corporis ipsum mollitia ullam quo dicta amet aut!</p>
+            </div>
+            <div class="content" id="form">
+                <h2>Fill Out This Form!</h2>
+                <form action="https://getform.io/f/3ded7eae-9687-40d3-8a8e-8db15037199d" method="POST">
+                    <label for="name">Name:</label><br>
+                    <input type="text" id="name" name="name" required><br>
+    
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email" required><br>
+    
+                    <p>Purpose:</p>
+                    <input type="radio" id="service" name="reasonForContact" value="service">
+                    <label for="service">Request a Service</label><br>
+                    <input type="radio" id="employment" name="reasonForContact" value="employment">
+                    <label for="employment">Employment Opportunity</label><br>
+                    <input type="radio" id="other" name="reasonForContact" value="other">
+                    <label for="other">Other</label><br>
+    
+                    <label for="message">Message:</label><br>
+                    <textarea id="message" name="message" required></textarea><br>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
         </div>
+
+        <div class="content">
+            <h2>I'll be with you when I can...</h2>
+            <p>For now, <a href="about.html" class="inlineLink">Find Out More About Me</a> or <a href="python.html" class="inlineLink">Keep Looking Around</a>.</p>
+        </div>
+        
         
     </div>
 

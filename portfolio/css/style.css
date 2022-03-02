@@ -19,6 +19,10 @@ body {
     flex: 1 0 auto;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 /* Header */
 .headerCenterer {
     margin: 30px 50px 10px;
@@ -289,7 +293,7 @@ footer i {
 @media only screen and (max-width:800px) { /* Tablet / Horizontal Phone */
     /* Margins etc. */
     a.rainbowLink, .content {
-        margin: 30px;
+        margin: 10px 15px 15px;
     }
     .headerCenterer {
         margin: 30px 30px 10px;
