@@ -24,6 +24,36 @@
             margin: 5px;
         }
 
+        .formSpacer {
+            margin: 8px 0;
+        }
+        form label, form p {
+            margin: 8px 0 4px 0;
+        }
+
+        .iconMenu {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+
+            margin: 0;
+        }
+        .iconElement {
+            display: block;
+            text-align: center;
+            color: white;
+            text-decoration: none;
+            
+            margin: 15px 0;
+        }
+        .iconElement > i {
+            font-size: 80px;
+        }
+        .iconElement > p {
+            margin: 0 auto;
+            max-width: 250px;
+        }
+
         @media only screen and (max-width:800px) {
             .contactFlex {
                 flex-wrap: wrap;
@@ -45,30 +75,52 @@
         <div class="contactFlex">
             <div class="content" id="links">
                 <h2>Reach Out to Me!</h2>
-                <p>email: taraspylypenko@gmail.com</p>
-                <p>address: 123 Sesame St.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem odio, inventore asperiores cum eos omnis explicabo, enim neque molestiae cupiditate provident quod corporis ipsum mollitia ullam quo dicta amet aut!</p>
+                <div class="iconMenu">
+                    <a href="mailto:taraspylypenko@gmail.com" class="iconElement" id="iconEmain">
+                        <i class="bi bi-envelope"></i>
+                        <p>taraspylypenko@gmail.com</p>
+                    </a>
+                    <div class="iconElement" id="iconPhone">
+                        <i class="bi bi-phone"></i>
+                        <p>(555) 123-4567</p>             
+                    </div>
+                    <div class="iconElement" id="iconAddress">
+                        <i class="bi bi-geo-alt"></i>
+                        <p>10613 NE 38th Pl, Kirkland, WA 98033, United States</p>             
+                    </div>
+                </div>
             </div>
             <div class="content" id="form">
                 <h2>Fill Out This Form!</h2>
                 <form action="https://getform.io/f/3ded7eae-9687-40d3-8a8e-8db15037199d" method="POST">
-                    <label for="name">Name:</label><br>
-                    <input type="text" id="name" name="name" required><br>
+                    <div class="formSpacer">
+                        <label for="name">Name:</label><br>
+                        <input type="text" id="name" name="name" required><br>
+                    </div>
+                    
+                    <div class="formSpacer">
+                        <label for="email">Email:</label><br>
+                        <input type="email" id="email" name="email" required><br>
+                    </div>
     
-                    <label for="email">Email:</label><br>
-                    <input type="email" id="email" name="email" required><br>
-    
-                    <p>Purpose:</p>
-                    <input type="radio" id="service" name="reasonForContact" value="service">
-                    <label for="service">Request a Service</label><br>
-                    <input type="radio" id="employment" name="reasonForContact" value="employment">
-                    <label for="employment">Employment Opportunity</label><br>
-                    <input type="radio" id="other" name="reasonForContact" value="other">
-                    <label for="other">Other</label><br>
-    
-                    <label for="message">Message:</label><br>
-                    <textarea id="message" name="message" required></textarea><br>
-                    <button type="submit">Send</button>
+                    <div class="formSpacer">
+                        <p>Purpose:</p>
+                        <input type="radio" id="service" name="reasonForContact" value="service">
+                        <label for="service">Request a Service</label><br>
+                        <input type="radio" id="employment" name="reasonForContact" value="employment">
+                        <label for="employment">Employment Opportunity</label><br>
+                        <input type="radio" id="other" name="reasonForContact" value="other">
+                        <label for="other">Other</label><br>
+                    </div>
+
+                    <div class="formSpacer">    
+                        <label for="message">Message:</label><br>
+                        <textarea id="message" name="message" required></textarea><br>
+                    </div>
+
+                    <div class="formSpacer">
+                        <button type="submit">Send</button>
+                    </div>
                 </form>
             </div>
         </div>
