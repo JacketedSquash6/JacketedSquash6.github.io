@@ -52,7 +52,7 @@ a.rainbowLink {
     color: white;
     text-decoration: none;
 
-    margin: 10vh 40vw 0 10vw;
+    margin: 10vh 40vw 25px 10vw;
     padding: 0;
 }
 
@@ -139,7 +139,7 @@ a.rainbowLink {
     padding: 15px;
 }
 .sideContent {
-    margin: 40px 50vw 0 5vw;
+    margin: 15px 50vw 0 5vw;
 }
 .content > * {
     margin: 6px;
@@ -260,7 +260,7 @@ li.navItem:nth-child(6) {
     border-radius: 15px 15px 0 0;
     width: fit-content;
 
-    margin: 40px 25vw 0 7vw;
+    margin: 15px 25vw 0 7vw;
     padding: 15px;
 
     flex-shrink: 0;
