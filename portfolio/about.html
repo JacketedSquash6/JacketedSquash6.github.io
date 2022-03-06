@@ -11,9 +11,35 @@
 
     <script src="https://www.w3schools.com/lib/w3.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <style>
+        /* Background image */
+        #backgroundImage {
+            position: fixed;
+            width: 100vw;
+            right: 0;
+            top: -10vh;
+            z-index: -10;
+        }
+
+        @media only screen and (max-width:800px) {  
+            #backgroundImage {
+                display: none;
+            }  
+            body {
+                background-image: url(images/desert.png);
+                background-attachment: fixed;
+                background-size: cover;
+                justify-content: center;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+        }
+    </style>
 </head>
 <body>
     <div w3-include-html="nav.html"></div>
+
+    <img id="backgroundImage" src="images/desert.png" alt="a picture of me">
     
     <div class="container">
         <div class="headerCenterer">
@@ -22,7 +48,22 @@
             </div>
         </div>
         
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim at officia sequi corrupti quaerat non cum dolore dolores facere, debitis dolorum quidem ratione dolorem, reprehenderit provident laudantium. Reiciendis, dolore pariatur.</p>
+        <div class="content sideContent">
+            <h2>Bio</h2>
+            <p>I am a Ukrainian 🇺🇦 living and studying in the US 🇺🇸. Besides those two countries, I've also lived in Jordan 🇯🇴 and Canada 🇨🇦. In my free time, I play video games and guitar, do origami, and sometimes go outside.</p>
+        </div>
+        <div class="content sideContent">
+            <h2>Education</h2>
+            <p>I am graduating from Eastside Preparatory School in 2022, and pursuing a degree in Computer Science from [college name].</p>
+            <p>I am competent in a large variety of programming languages, and have studied Algorithms, Data Structures, and some Machine Learning</p>
+        </div>
+        <div class="content sideContent">
+            <h2>Favorites</h2>
+            <p>Favorite Dessert: Pie 🥧</p>
+            <p>Favorite Type of Chart: Pie 🥧</p>
+            <p>Favorite Circle Constant: Tau τ</p>
+            <p>Second-Favorite Circle Constant: Pi 🥧</p>
+        </div>
     </div>
 
     <div w3-include-html="footer.html"></div>
