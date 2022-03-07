@@ -11,6 +11,46 @@
 
     <script src="https://www.w3schools.com/lib/w3.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <style>
+        .pricingFlex {
+            display: flex;
+            flex-wrap: nowrap;
+            margin: 0 30px;
+        }
+        .pricingFlex > div {
+            flex-basis: 100%;
+            margin: 5px;
+        }
+
+        .featuresFlex {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+        }
+        .featuresFlex p {
+            margin: 0 0 0 5px;
+        }
+
+        .costTitle, .costNumber, .costCrossOut {
+            text-align: center;
+        }
+        .costNumber {
+            font-size: 60px;
+        }
+        .costCrossOut {
+            color: #f88;
+            text-decoration: line-through;
+            margin-bottom: -25px;
+        }
+
+        @media only screen and (max-width:800px) {
+            .pricingFlex {
+                flex-wrap: wrap;
+                margin: 0 10px;
+            }
+        }
+    </style>
 </head>
 <body>
     <div w3-include-html="nav.html"></div>
@@ -22,8 +62,71 @@
             </div>
         </div>
 
+        <div class="pricingFlex">
+            <div class="content pricePackage">
+                <h3 class="costTitle">Beggar Plan</h3>
+                <h2 class="costNumber">$0</h2>
+                <div class="featuresFlex">
+                    <i class="bi bi-check-circle"></i>
+                    <p>You can send me whatever you want</p>
+                </div>
+                <div class="featuresFlex">
+                    <i class="bi bi-check-circle"></i>
+                    <p>I might look at it</p>
+                </div>
+                <div class="featuresFlex">
+                    <i class="bi bi-check-circle"></i>
+                    <p>If it looks interesting, I might respond</p>
+                </div>
+            </div>
+            <div class="content pricePackage">
+                <h3 class="costTitle">Short-term Freelance Plan</h3>
+                <h2 class="costNumber">$99/hr</h2>
+                <div class="featuresFlex">
+                    <i class="bi bi-check-circle"></i>
+                    <p>Up to 8 hours of work in any field</p>
+                </div>
+                <div class="featuresFlex">
+                    <i class="bi bi-check-circle"></i>
+                    <p>Payment up-front</p>
+                </div>
+                <div class="featuresFlex">
+                    <i class="bi bi-check-circle"></i>
+                    <p>Access to all features</p>
+                </div>
+                <div class="featuresFlex">
+                    <i class="bi bi-check-circle"></i>
+                    <p>Email and Chat support</p>
+                </div>
+            </div>
+            <div class="content pricePackage">
+                <h3 class="costTitle">Long-term Freelance Plan</h3>
+                <h4 class="costCrossOut">$99/hr</h4>
+                <h2 class="costNumber">$79/hr</h2>
+                <div class="featuresFlex">
+                    <i class="bi bi-check-circle"></i>
+                    <p>Indefinite employment in any field</p>
+                </div>
+                <div class="featuresFlex">
+                    <i class="bi bi-check-circle"></i>
+                    <p>Payment in 8-hour intervals</p>
+                </div>
+                <div class="featuresFlex">
+                    <i class="bi bi-check-circle"></i>
+                    <p>Access to all features</p>
+                </div>
+                <div class="featuresFlex">
+                    <i class="bi bi-check-circle"></i>
+                    <p>Email and Chat support</p>
+                </div>
+            </div>
+        </div>
+
         <div class="content">
-            
+            <h2>Need something else?</h2>
+            <p>
+                I know not everything one might need can be summarized on one page. If you want to give me an offer, <a href="contact.html" class="inlineLink">Reach Out</a>.
+            </p>
         </div>
     </div>
 
